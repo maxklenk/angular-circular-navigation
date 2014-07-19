@@ -1,0 +1,535 @@
+@import url(http://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css);
+
+
+// -------------------------------------
+//   Main
+// -------------------------------------
+
+circular *, .circular * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative
+}
+
+circular, .circular {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
+
+
+// -------------------------------------
+//   central Button
+// -------------------------------------
+
+.cn-button {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 11;
+  margin-top: -2.25em;
+  margin-left: -2.25em;
+  padding-top: 0em;
+  width: 4.5em;
+  height: 4.5em;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  background-color: #fff;
+  color: #52be7f;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+}
+
+
+
+// -------------------------------------
+//   ??
+// -------------------------------------
+
+.cn-wrapper {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 10;
+  margin-top: -13em;
+  margin-left: -13.5em;
+  width: 27em;
+  height: 27em;
+  border-radius: 50%;
+  background: transparent;
+  opacity: 0;
+  -webkit-transition: all .3s ease 0.3s;
+  -moz-transition: all .3s ease 0.3s;
+  transition: all .3s ease 0.3s;
+  -webkit-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  transform: scale(0.1);
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/*cover to prevent extra space of anchors from being clickable*/
+.cn-wrapper:after{
+  content:".";
+  display:block;
+  font-size:2em;
+  width:6.2em;
+  height:6.2em;
+  position: absolute;
+  left: 50%;
+  margin-left: -3.1em;
+  top:50%;
+  margin-top: -3.1em;
+  border-radius: 50%;
+  z-index:10;
+  color: transparent;
+}
+
+.opened-nav {
+  border-radius: 50%;
+  opacity: 1;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+
+
+// -------------------------------------
+//   ??
+// -------------------------------------
+
+.cn-wrapper li {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  margin-top: -1.3em;
+  margin-left: -10em;
+  width: 10em;
+  height: 10em;
+  font-size: 1.5em;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-transform: rotate(75deg) skew(60deg);
+  -ms-transform: rotate(75deg) skew(60deg);
+  transform: rotate(75deg) skew(60deg);
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  pointer-events: none;
+}
+
+.cn-wrapper li a {
+  position: absolute;
+  right: -7.25em;
+  bottom: -7.25em;
+  display: block;
+  width: 14.5em;
+  height: 14.5em;
+  border-radius: 50%;
+  background: #429a67;
+  background: -webkit-radial-gradient(transparent 35%, #429a67 35%);
+  background: -moz-radial-gradient(transparent 35%, #429a67 35%);
+  background: radial-gradient(transparent 35%, #429a67 35%);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2em;
+  line-height: 2;
+  -webkit-transform: skew(-60deg) rotate(-75deg) scale(1);
+  -ms-transform: skew(-60deg) rotate(-75deg) scale(1);
+  transform: skew(-60deg) rotate(-75deg) scale(1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  pointer-events: auto;
+}
+
+.cn-wrapper li a span {
+  position: relative;
+  top: 1.8em;
+  display: block;
+  font-size: .5em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.cn-wrapper li a:hover,
+.cn-wrapper li a:active,
+.cn-wrapper li a:focus {
+  background: -webkit-radial-gradient(transparent 35%, #449e6a 35%);
+  background: -moz-radial-gradient(transparent 35%, #449e6a 35%);
+  background: radial-gradient(transparent 35%, #449e6a 35%);
+}
+
+
+
+.opened-nav li {
+  -webkit-transition: all .3s ease .3s;
+  -moz-transition: all .3s ease .3s;
+  transition: all .3s ease .3s;
+}
+
+
+
+// -------------------------------------
+//   rotated items
+// -------------------------------------
+
+@mixin prefix($property, $value) {
+     @each $prefix in -webkit-, -ms-, '' {
+          #{$prefix}#{$property}: $value;
+     }
+}
+// odd
+.item-odd-left-5 {
+  @include prefix(transform, rotate(-85deg) skew(60deg));
+}
+.item-odd-left-4 {
+  @include prefix(transform, rotate(-53deg) skew(60deg));
+}
+.item-odd-left-3 {
+  @include prefix(transform, rotate(-21deg) skew(60deg));
+}
+.item-odd-left-2 {
+  @include prefix(transform, rotate(11deg) skew(60deg));
+}
+.item-odd-left-1 {
+  @include prefix(transform, rotate(43deg) skew(60deg));
+}
+.item-odd-center {
+  @include prefix(transform, rotate(75deg) skew(60deg));
+}
+.item-odd-right-1 {
+  @include prefix(transform, rotate(107deg) skew(60deg));
+}
+.item-odd-right-2 {
+  @include prefix(transform, rotate(139deg) skew(60deg));
+}
+.item-odd-right-3 {
+  @include prefix(transform, rotate(171deg) skew(60deg));
+}
+.item-odd-right-4 {
+  @include prefix(transform, rotate(203deg) skew(60deg));
+}
+.item-odd-right-5 {
+  @include prefix(transform, rotate(235deg) skew(60deg));
+}
+
+// even
+.item-even-left-5 {
+  @include prefix(transform, rotate(-69deg) skew(60deg));
+}
+.item-even-left-4 {
+  @include prefix(transform, rotate(-37deg) skew(60deg));
+}
+.item-even-left-3 {
+  @include prefix(transform, rotate(-5deg) skew(60deg));
+}
+.item-even-left-2 {
+  @include prefix(transform, rotate(27deg) skew(60deg));
+}
+.item-even-left-1 {
+  @include prefix(transform, rotate(59deg) skew(60deg));
+}
+.item-even-right-1 {
+  @include prefix(transform, rotate(91deg) skew(60deg));
+}
+.item-even-right-2 {
+  @include prefix(transform, rotate(123deg) skew(60deg));
+}
+.item-even-right-3 {
+  @include prefix(transform, rotate(155deg) skew(60deg));
+}
+.item-even-right-4 {
+  @include prefix(transform, rotate(187deg) skew(60deg));
+}
+.item-even-right-5 {
+  @include prefix(transform, rotate(219deg) skew(60deg));
+}
+
+
+// ----- items-1 ----- 
+  .opened-nav.items-1 li:first-child {
+    @extend .item-odd-center;
+  }
+
+// ----- items-2 ----- 
+  .opened-nav.items-2 li:first-child {
+    @extend .item-even-left-1;
+  }
+  .opened-nav.items-2 li:nth-child(2) {
+    @extend .item-even-right-1;
+  }
+
+// ----- items-3 ----- 
+  .opened-nav.items-3 li:first-child {
+    @extend .item-odd-left-1;
+  }
+
+  .opened-nav.items-3 li:nth-child(2) {
+    @extend .item-odd-center;
+  }
+
+  .opened-nav.items-3 li:nth-child(3) {
+    @extend .item-odd-right-1;
+  }
+
+// ----- items-4 ----- 
+  .opened-nav.items-4 li:first-child {
+    @extend .item-even-left-2;
+  }
+
+  .opened-nav.items-4 li:nth-child(2) {
+    @extend .item-even-left-1;
+  }
+
+  .opened-nav.items-4 li:nth-child(3) {
+    @extend .item-even-right-1;
+  }
+
+  .opened-nav.items-4 li:nth-child(4) {
+    @extend .item-even-right-2;
+  }
+
+// ----- items-5 ----- 
+  .opened-nav.items-5 li:first-child {
+    @extend .item-odd-left-2;
+  }
+
+  .opened-nav.items-5 li:nth-child(2) {
+    @extend .item-odd-left-1;
+  }
+
+  .opened-nav.items-5 li:nth-child(3) {
+    @extend .item-odd-center;
+  }
+
+  .opened-nav.items-5 li:nth-child(4) {
+    @extend .item-odd-right-1;
+  }
+
+  .opened-nav.items-5 li:nth-child(5) {
+    @extend .item-odd-right-2;
+  }
+
+// ----- items-6 ----- 
+  .opened-nav.items-6 li:first-child {
+    @extend .item-even-left-3;
+  }
+
+  .opened-nav.items-6 li:nth-child(2) {
+    @extend .item-even-left-2;
+  }
+
+  .opened-nav.items-6 li:nth-child(3) {
+    @extend .item-even-left-1;
+  }
+
+  .opened-nav.items-6 li:nth-child(4) {
+    @extend .item-even-right-1;
+  }
+
+  .opened-nav.items-6 li:nth-child(5) {
+    @extend .item-even-right-2;
+  }
+
+  .opened-nav.items-6 li:nth-child(6) {
+    @extend .item-even-right-3;
+  }
+
+// ----- items-7 ----- 
+  .opened-nav.items-7 li:first-child {
+    @extend .item-odd-left-3;
+  }
+
+  .opened-nav.items-7 li:nth-child(2) {
+    @extend .item-odd-left-2;
+  }
+
+  .opened-nav.items-7 li:nth-child(3) {
+    @extend .item-odd-left-1;
+  }
+
+  .opened-nav.items-7 li:nth-child(4) {
+    @extend .item-odd-center;
+  }
+
+  .opened-nav.items-7 li:nth-child(5) {
+    @extend .item-odd-right-1;
+  }
+
+  .opened-nav.items-7 li:nth-child(6) {
+    @extend .item-odd-right-2;
+  }
+
+  .opened-nav.items-7 li:nth-child(7) {
+    @extend .item-odd-right-3;
+  }
+
+// ----- items-8 ----- 
+  .opened-nav.items-8 li:first-child {
+    @extend .item-even-left-4;
+  }
+
+  .opened-nav.items-8 li:nth-child(2) {
+    @extend .item-even-left-3;
+  }
+
+  .opened-nav.items-8 li:nth-child(3) {
+    @extend .item-even-left-2;
+  }
+
+  .opened-nav.items-8 li:nth-child(4) {
+    @extend .item-even-left-1;
+  }
+
+  .opened-nav.items-8 li:nth-child(5) {
+    @extend .item-even-right-1;
+  }
+
+  .opened-nav.items-8 li:nth-child(6) {
+    @extend .item-even-right-2;
+  }
+
+  .opened-nav.items-8 li:nth-child(7) {
+    @extend .item-even-right-3;
+  }
+
+  .opened-nav.items-8 li:nth-child(8) {
+    @extend .item-even-right-4;
+  }
+
+// ----- items-9 ----- 
+  .opened-nav.items-9 li:first-child {
+    @extend .item-odd-left-4;
+  }
+  .opened-nav.items-9 li:nth-child(2) {
+    @extend .item-odd-left-3;
+  }
+
+  .opened-nav.items-9 li:nth-child(3) {
+    @extend .item-odd-left-2;
+  }
+
+  .opened-nav.items-9 li:nth-child(4) {
+    @extend .item-odd-left-1;
+  }
+
+  .opened-nav.items-9 li:nth-child(5) {
+    @extend .item-odd-center;
+  }
+
+  .opened-nav.items-9 li:nth-child(6) {
+    @extend .item-odd-right-1;
+  }
+
+  .opened-nav.items-9 li:nth-child(7) {
+    @extend .item-odd-right-2;
+  }
+
+  .opened-nav.items-9 li:nth-child(8) {
+    @extend .item-odd-right-3;
+  }
+
+  .opened-nav.items-9 li:nth-child(9) {
+    @extend .item-odd-right-4;
+  }
+
+// ----- items-10 ----- 
+  .opened-nav.items-10 li:first-child {
+    @extend .item-even-left-5;
+  }
+
+  .opened-nav.items-10 li:nth-child(2) {
+    @extend .item-even-left-4;
+  }
+
+  .opened-nav.items-10 li:nth-child(3) {
+    @extend .item-even-left-3;
+  }
+
+  .opened-nav.items-10 li:nth-child(4) {
+    @extend .item-even-left-2;
+  }
+
+  .opened-nav.items-10 li:nth-child(5) {
+    @extend .item-even-left-1;
+  }
+
+  .opened-nav.items-10 li:nth-child(6) {
+    @extend .item-even-right-1;
+  }
+
+  .opened-nav.items-10 li:nth-child(7) {
+    @extend .item-even-right-2;
+  }
+
+  .opened-nav.items-10 li:nth-child(8) {
+    @extend .item-even-right-3;
+  }
+
+  .opened-nav.items-10 li:nth-child(9) {
+    @extend .item-even-right-4;
+  }
+
+  .opened-nav.items-10 li:nth-child(10) {
+    @extend .item-even-right-5;
+  }
+
+// ----- items-11 ----- 
+  .opened-nav.items-11 li:first-child {
+    @extend .item-odd-left-5;
+  }
+
+  .opened-nav.items-11 li:nth-child(2) {
+    @extend .item-odd-left-4;
+  }
+
+  .opened-nav.items-11 li:nth-child(3) {
+    @extend .item-odd-left-3;
+  }
+
+  .opened-nav.items-11 li:nth-child(4) {
+    @extend .item-odd-left-2;
+  }
+
+  .opened-nav.items-11 li:nth-child(5) {
+    @extend .item-odd-left-1;
+  }
+
+  .opened-nav.items-11 li:nth-child(6) {
+    @extend .item-odd-center;
+  }
+
+  .opened-nav.items-11 li:nth-child(7) {
+    @extend .item-odd-right-1;
+  }
+
+  .opened-nav.items-11 li:nth-child(8) {
+    @extend .item-odd-right-2;
+  }
+
+  .opened-nav.items-11 li:nth-child(9) {
+    @extend .item-odd-right-3;
+  }
+
+  .opened-nav.items-11 li:nth-child(10) {
+    @extend .item-odd-right-4;
+  }
+
+  .opened-nav.items-11 li:nth-child(11) {
+    @extend .item-odd-right-5;
+  }

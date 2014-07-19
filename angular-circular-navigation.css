@@ -1,20 +1,22 @@
 @import url(http://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css);
-
+/* line 8, scss/angular-circular-navigation.scss */
 circular *, .circular * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   list-style: none;
-  position: relative
+  position: relative;
 }
 
+/* line 17, scss/angular-circular-navigation.scss */
 circular, .circular {
   position: absolute;
   top: 100%;
   left: 50%;
 }
 
+/* line 28, scss/angular-circular-navigation.scss */
 .cn-button {
   position: absolute;
   top: 100%;
@@ -38,6 +40,7 @@ circular, .circular {
   -webkit-backface-visibility: hidden;
 }
 
+/* line 57, scss/angular-circular-navigation.scss */
 .cn-wrapper {
   position: absolute;
   top: 100%;
@@ -55,29 +58,30 @@ circular, .circular {
   transition: all .3s ease 0.3s;
   -webkit-transform: scale(0.1);
   -ms-transform: scale(0.1);
-  -moz-transform: scale(0.1);
   transform: scale(0.1);
   pointer-events: none;
   overflow: hidden;
 }
 
 /*cover to prevent extra space of anchors from being clickable*/
-.cn-wrapper:after{
-  content:".";
-  display:block;
-  font-size:2em;
-  width:6.2em;
-  height:6.2em;
+/* line 80, scss/angular-circular-navigation.scss */
+.cn-wrapper:after {
+  content: ".";
+  display: block;
+  font-size: 2em;
+  width: 6.2em;
+  height: 6.2em;
   position: absolute;
   left: 50%;
   margin-left: -3.1em;
-  top:50%;
+  top: 50%;
   margin-top: -3.1em;
   border-radius: 50%;
-  z-index:10;
+  z-index: 10;
   color: transparent;
 }
 
+/* line 96, scss/angular-circular-navigation.scss */
 .opened-nav {
   border-radius: 50%;
   opacity: 1;
@@ -85,12 +89,12 @@ circular, .circular {
   -moz-transition: all .3s ease;
   transition: all .3s ease;
   -webkit-transform: scale(1);
-  -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
   pointer-events: auto;
 }
 
+/* line 114, scss/angular-circular-navigation.scss */
 .cn-wrapper li {
   position: absolute;
   top: 50%;
@@ -104,16 +108,15 @@ circular, .circular {
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   transition: all .3s ease;
-  -webkit-transform: rotate(76deg) skew(60deg);
-  -moz-transform: rotate(76deg) skew(60deg);
-  -ms-transform: rotate(76deg) skew(60deg);
-  transform: rotate(76deg) skew(60deg);
+  -webkit-transform: rotate(75deg) skew(60deg);
+  -ms-transform: rotate(75deg) skew(60deg);
+  transform: rotate(75deg) skew(60deg);
   -webkit-transform-origin: 100% 100%;
-  -moz-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
   pointer-events: none;
 }
 
+/* line 135, scss/angular-circular-navigation.scss */
 .cn-wrapper li a {
   position: absolute;
   right: -7.25em;
@@ -132,7 +135,6 @@ circular, .circular {
   font-size: 1.2em;
   line-height: 2;
   -webkit-transform: skew(-60deg) rotate(-75deg) scale(1);
-  -moz-transform: skew(-60deg) rotate(-75deg) scale(1);
   -ms-transform: skew(-60deg) rotate(-75deg) scale(1);
   transform: skew(-60deg) rotate(-75deg) scale(1);
   -webkit-backface-visibility: hidden;
@@ -140,6 +142,7 @@ circular, .circular {
   pointer-events: auto;
 }
 
+/* line 160, scss/angular-circular-navigation.scss */
 .cn-wrapper li a span {
   position: relative;
   top: 1.8em;
@@ -149,6 +152,7 @@ circular, .circular {
   text-transform: uppercase;
 }
 
+/* line 171, scss/angular-circular-navigation.scss */
 .cn-wrapper li a:hover,
 .cn-wrapper li a:active,
 .cn-wrapper li a:focus {
@@ -157,57 +161,156 @@ circular, .circular {
   background: radial-gradient(transparent 35%, #449e6a 35%);
 }
 
+/* line 179, scss/angular-circular-navigation.scss */
 .opened-nav li {
   -webkit-transition: all .3s ease .3s;
   -moz-transition: all .3s ease .3s;
   transition: all .3s ease .3s;
 }
 
-.opened-nav li:first-child {
-  -webkit-transform: rotate(-20deg) skew(60deg);
-  -moz-transform: rotate(-20deg) skew(60deg);
-  -ms-transform: rotate(-20deg) skew(60deg);
-  transform: rotate(-20deg) skew(60deg);
+/* line 197, scss/angular-circular-navigation.scss */
+.item-odd-left-5, .opened-nav.items-11 li:first-child {
+  -webkit-transform: rotate(-85deg) skew(60deg);
+  -ms-transform: rotate(-85deg) skew(60deg);
+  transform: rotate(-85deg) skew(60deg);
 }
 
-.opened-nav li:nth-child(2) {
-  -webkit-transform: rotate(12deg) skew(60deg);
-  -moz-transform: rotate(12deg) skew(60deg);
-  -ms-transform: rotate(12deg) skew(60deg);
-  transform: rotate(12deg) skew(60deg);
+/* line 200, scss/angular-circular-navigation.scss */
+.item-odd-left-4, .opened-nav.items-9 li:first-child, .opened-nav.items-11 li:nth-child(2) {
+  -webkit-transform: rotate(-53deg) skew(60deg);
+  -ms-transform: rotate(-53deg) skew(60deg);
+  transform: rotate(-53deg) skew(60deg);
 }
 
-.opened-nav  li:nth-child(3) {
-  -webkit-transform: rotate(44deg) skew(60deg);
-  -moz-transform: rotate(44deg) skew(60deg);
-  -ms-transform: rotate(44deg) skew(60deg);
-  transform: rotate(44deg) skew(60deg);
+/* line 203, scss/angular-circular-navigation.scss */
+.item-odd-left-3, .opened-nav.items-7 li:first-child, .opened-nav.items-9 li:nth-child(2), .opened-nav.items-11 li:nth-child(3) {
+  -webkit-transform: rotate(-21deg) skew(60deg);
+  -ms-transform: rotate(-21deg) skew(60deg);
+  transform: rotate(-21deg) skew(60deg);
 }
 
-.opened-nav li:nth-child(4) {
-  -webkit-transform: rotate(76deg) skew(60deg);
-  -moz-transform: rotate(76deg) skew(60deg);
-  -ms-transform: rotate(76deg) skew(60deg);
-  transform: rotate(76deg) skew(60deg);
+/* line 206, scss/angular-circular-navigation.scss */
+.item-odd-left-2, .opened-nav.items-5 li:first-child, .opened-nav.items-7 li:nth-child(2), .opened-nav.items-9 li:nth-child(3), .opened-nav.items-11 li:nth-child(4) {
+  -webkit-transform: rotate(11deg) skew(60deg);
+  -ms-transform: rotate(11deg) skew(60deg);
+  transform: rotate(11deg) skew(60deg);
 }
 
-.opened-nav li:nth-child(5) {
-  -webkit-transform: rotate(108deg) skew(60deg);
-  -moz-transform: rotate(108deg) skew(60deg);
-  -ms-transform: rotate(108deg) skew(60deg);
-  transform: rotate(108deg) skew(60deg);
+/* line 209, scss/angular-circular-navigation.scss */
+.item-odd-left-1, .opened-nav.items-3 li:first-child, .opened-nav.items-5 li:nth-child(2), .opened-nav.items-7 li:nth-child(3), .opened-nav.items-9 li:nth-child(4), .opened-nav.items-11 li:nth-child(5) {
+  -webkit-transform: rotate(43deg) skew(60deg);
+  -ms-transform: rotate(43deg) skew(60deg);
+  transform: rotate(43deg) skew(60deg);
 }
 
-.opened-nav li:nth-child(6) {
-  -webkit-transform: rotate(140deg) skew(60deg);
-  -moz-transform: rotate(140deg) skew(60deg);
-  -ms-transform: rotate(140deg) skew(60deg);
-  transform: rotate(140deg) skew(60deg);
+/* line 212, scss/angular-circular-navigation.scss */
+.item-odd-center, .opened-nav.items-1 li:first-child, .opened-nav.items-3 li:nth-child(2), .opened-nav.items-5 li:nth-child(3), .opened-nav.items-7 li:nth-child(4), .opened-nav.items-9 li:nth-child(5), .opened-nav.items-11 li:nth-child(6) {
+  -webkit-transform: rotate(75deg) skew(60deg);
+  -ms-transform: rotate(75deg) skew(60deg);
+  transform: rotate(75deg) skew(60deg);
 }
 
-.opened-nav li:nth-child(7) {
-  -webkit-transform: rotate(172deg) skew(60deg);
-  -moz-transform: rotate(172deg) skew(60deg);
-  -ms-transform: rotate(172deg) skew(60deg);
-  transform: rotate(172deg) skew(60deg);
+/* line 215, scss/angular-circular-navigation.scss */
+.item-odd-right-1, .opened-nav.items-3 li:nth-child(3), .opened-nav.items-5 li:nth-child(4), .opened-nav.items-7 li:nth-child(5), .opened-nav.items-9 li:nth-child(6), .opened-nav.items-11 li:nth-child(7) {
+  -webkit-transform: rotate(107deg) skew(60deg);
+  -ms-transform: rotate(107deg) skew(60deg);
+  transform: rotate(107deg) skew(60deg);
+}
+
+/* line 218, scss/angular-circular-navigation.scss */
+.item-odd-right-2, .opened-nav.items-5 li:nth-child(5), .opened-nav.items-7 li:nth-child(6), .opened-nav.items-9 li:nth-child(7), .opened-nav.items-11 li:nth-child(8) {
+  -webkit-transform: rotate(139deg) skew(60deg);
+  -ms-transform: rotate(139deg) skew(60deg);
+  transform: rotate(139deg) skew(60deg);
+}
+
+/* line 221, scss/angular-circular-navigation.scss */
+.item-odd-right-3, .opened-nav.items-7 li:nth-child(7), .opened-nav.items-9 li:nth-child(8), .opened-nav.items-11 li:nth-child(9) {
+  -webkit-transform: rotate(171deg) skew(60deg);
+  -ms-transform: rotate(171deg) skew(60deg);
+  transform: rotate(171deg) skew(60deg);
+}
+
+/* line 224, scss/angular-circular-navigation.scss */
+.item-odd-right-4, .opened-nav.items-9 li:nth-child(9), .opened-nav.items-11 li:nth-child(10) {
+  -webkit-transform: rotate(203deg) skew(60deg);
+  -ms-transform: rotate(203deg) skew(60deg);
+  transform: rotate(203deg) skew(60deg);
+}
+
+/* line 227, scss/angular-circular-navigation.scss */
+.item-odd-right-5, .opened-nav.items-11 li:nth-child(11) {
+  -webkit-transform: rotate(235deg) skew(60deg);
+  -ms-transform: rotate(235deg) skew(60deg);
+  transform: rotate(235deg) skew(60deg);
+}
+
+/* line 232, scss/angular-circular-navigation.scss */
+.item-even-left-5, .opened-nav.items-10 li:first-child {
+  -webkit-transform: rotate(-69deg) skew(60deg);
+  -ms-transform: rotate(-69deg) skew(60deg);
+  transform: rotate(-69deg) skew(60deg);
+}
+
+/* line 235, scss/angular-circular-navigation.scss */
+.item-even-left-4, .opened-nav.items-8 li:first-child, .opened-nav.items-10 li:nth-child(2) {
+  -webkit-transform: rotate(-37deg) skew(60deg);
+  -ms-transform: rotate(-37deg) skew(60deg);
+  transform: rotate(-37deg) skew(60deg);
+}
+
+/* line 238, scss/angular-circular-navigation.scss */
+.item-even-left-3, .opened-nav.items-6 li:first-child, .opened-nav.items-8 li:nth-child(2), .opened-nav.items-10 li:nth-child(3) {
+  -webkit-transform: rotate(-5deg) skew(60deg);
+  -ms-transform: rotate(-5deg) skew(60deg);
+  transform: rotate(-5deg) skew(60deg);
+}
+
+/* line 241, scss/angular-circular-navigation.scss */
+.item-even-left-2, .opened-nav.items-4 li:first-child, .opened-nav.items-6 li:nth-child(2), .opened-nav.items-8 li:nth-child(3), .opened-nav.items-10 li:nth-child(4) {
+  -webkit-transform: rotate(27deg) skew(60deg);
+  -ms-transform: rotate(27deg) skew(60deg);
+  transform: rotate(27deg) skew(60deg);
+}
+
+/* line 244, scss/angular-circular-navigation.scss */
+.item-even-left-1, .opened-nav.items-2 li:first-child, .opened-nav.items-4 li:nth-child(2), .opened-nav.items-6 li:nth-child(3), .opened-nav.items-8 li:nth-child(4), .opened-nav.items-10 li:nth-child(5) {
+  -webkit-transform: rotate(59deg) skew(60deg);
+  -ms-transform: rotate(59deg) skew(60deg);
+  transform: rotate(59deg) skew(60deg);
+}
+
+/* line 247, scss/angular-circular-navigation.scss */
+.item-even-right-1, .opened-nav.items-2 li:nth-child(2), .opened-nav.items-4 li:nth-child(3), .opened-nav.items-6 li:nth-child(4), .opened-nav.items-8 li:nth-child(5), .opened-nav.items-10 li:nth-child(6) {
+  -webkit-transform: rotate(91deg) skew(60deg);
+  -ms-transform: rotate(91deg) skew(60deg);
+  transform: rotate(91deg) skew(60deg);
+}
+
+/* line 250, scss/angular-circular-navigation.scss */
+.item-even-right-2, .opened-nav.items-4 li:nth-child(4), .opened-nav.items-6 li:nth-child(5), .opened-nav.items-8 li:nth-child(6), .opened-nav.items-10 li:nth-child(7) {
+  -webkit-transform: rotate(123deg) skew(60deg);
+  -ms-transform: rotate(123deg) skew(60deg);
+  transform: rotate(123deg) skew(60deg);
+}
+
+/* line 253, scss/angular-circular-navigation.scss */
+.item-even-right-3, .opened-nav.items-6 li:nth-child(6), .opened-nav.items-8 li:nth-child(7), .opened-nav.items-10 li:nth-child(8) {
+  -webkit-transform: rotate(155deg) skew(60deg);
+  -ms-transform: rotate(155deg) skew(60deg);
+  transform: rotate(155deg) skew(60deg);
+}
+
+/* line 256, scss/angular-circular-navigation.scss */
+.item-even-right-4, .opened-nav.items-8 li:nth-child(8), .opened-nav.items-10 li:nth-child(9) {
+  -webkit-transform: rotate(187deg) skew(60deg);
+  -ms-transform: rotate(187deg) skew(60deg);
+  transform: rotate(187deg) skew(60deg);
+}
+
+/* line 259, scss/angular-circular-navigation.scss */
+.item-even-right-5, .opened-nav.items-10 li:nth-child(10) {
+  -webkit-transform: rotate(219deg) skew(60deg);
+  -ms-transform: rotate(219deg) skew(60deg);
+  transform: rotate(219deg) skew(60deg);
 }
