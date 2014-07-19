@@ -6,7 +6,7 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   // default task
-  grunt.registerTask('default', ['jshint', 'compass:dist', 'karma:unit']);
+  grunt.registerTask('default', ['jshint', 'karma:unit']);
   grunt.registerTask('watch', ['karma:watch']);
   grunt.registerTask('coverage', ['karma:coverage', 'coveralls']);
 
