@@ -46,7 +46,46 @@
 
       app.controller('Controller', function ($scope) {
         $scope.options = {
-          isOpen: false
+          content: 'Menu',
+          isOpen: false,
+          toggleOnClick: true,
+          items: [
+            {
+              content: 'About',
+              cssClass: '',
+              onclick: function () {console.log('About');}
+            },
+            {
+              content: 'Tutorials',
+              cssClass: '',
+              onclick: 'test'
+            },
+            {
+              content: 'Articles',
+              cssClass: '',
+              onclick: ''
+            },
+            {
+              content: 'Snippets',
+              cssClass: '',
+              onclick: ''
+            },
+            {
+              content: 'Plugins',
+              cssClass: '',
+              onclick: ''
+            },
+            {
+              content: 'Contact',
+              cssClass: '',
+              onclick: ''
+            },
+            {
+              content: 'Follow',
+              cssClass: '',
+              onclick: ''
+            }
+          ]
         };
       });
     </script>
