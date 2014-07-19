@@ -1,6 +1,8 @@
+# npm
 node_modules/
-bower_components/
-*.log
 
-build/
-dist/
+# bower
+bower_components/
+
+# testing
+coverage/
