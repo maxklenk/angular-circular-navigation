@@ -1,5 +1,7 @@
 @import url(http://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css);
 
+$item-background-color: #0A833D;
+
 // Small
 // $button-size: 2em;
 // $empty-circel-size: 2em;
@@ -160,10 +162,11 @@ circular, .circular {
   height: $a-size;
   display: block;
   border-radius: 50%;
-  background: #429a67;
-  background: -webkit-radial-gradient(transparent $a-percent, #429a67 $a-percent);
-  background: -moz-radial-gradient(transparent $a-percent, #429a67 $a-percent);
-  background: radial-gradient(transparent $a-percent, #429a67 $a-percent);
+  background: $item-background-color;
+  background: -webkit-radial-gradient(transparent $a-percent, $item-background-color $a-percent);
+  background: -moz-radial-gradient(transparent $a-percent, $item-background-color $a-percent);
+  background: radial-gradient(transparent $a-percent, $item-background-color $a-percent);
+  opacity: 0.5;
   color: #fff;
   text-align: center;
   text-decoration: none;
@@ -175,6 +178,16 @@ circular, .circular {
   cursor: pointer;
 }
 
+.cn-wrapper li a.is-active {
+  opacity: 1;
+}
+
+.cn-wrapper li a:hover,
+.cn-wrapper li a:active,
+.cn-wrapper li a:focus {
+  opacity: 0.7;
+}
+
 .cn-wrapper li a span {
   position: relative;
   top: 1.8em;
@@ -182,14 +195,6 @@ circular, .circular {
   font-size: .5em;
   font-weight: 700;
   text-transform: uppercase;
-}
-
-.cn-wrapper li a:hover,
-.cn-wrapper li a:active,
-.cn-wrapper li a:focus {
-  background: -webkit-radial-gradient(transparent $a-percent, #449e6a $a-percent);
-  background: -moz-radial-gradient(transparent $a-percent, #449e6a $a-percent);
-  background: radial-gradient(transparent $a-percent, #449e6a $a-percent);
 }
 
 .opened-nav li {
