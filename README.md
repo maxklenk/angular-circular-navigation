@@ -1,4 +1,4 @@
-# angular-circular-navigation [![Build Status](https://travis-ci.org/maxklenk/angular-circular-navigation.svg?branch=master)](https://travis-ci.org/maxklenk/angular-circular-navigation) [![Coverage Status](https://coveralls.io/repos/maxklenk/angular-circular-navigation/badge.png?branch=master)](https://coveralls.io/r/maxklenk/angular-circular-navigation?branch=master) [![Dependency Status](https://gemnasium.com/maxklenk/angular-circular-navigation.svg)](https://gemnasium.com/maxklenk/angular-circular-navigation)
+# angular-circular-navigation [![Build Status](https://travis-ci.org/maxklenk/angular-circular-navigation.svg?branch=master)](https://travis-ci.org/maxklenk/angular-circular-navigation) [![Coverage Status](https://coveralls.io/repos/maxklenk/angular-circular-navigation/badge.png?branch=master)](https://coveralls.io/r/maxklenk/angular-circular-navigation?branch=master)
 
 angular-circular-navigation is a [AngularJS](https://github.com/angular/angular.js) directive, which is build on top of the Tutorial [Building a circular navigation with css transform](http://tympanus.net/codrops/2013/08/09/building-a-circular-navigation-with-css-transforms/) by [Sara Soueidan](http://sarasoueidan.com/).
 
@@ -32,7 +32,6 @@ $scope.options = {
   items: [
     {
       content: 'About',
-      cssClass: '',
       onclick: function () {console.log('About');}
     }
   ]
@@ -50,7 +49,85 @@ Then you are ready to use the directive in your view:
 
 ### Options
 
-...
+The following attributes define the circular navigation menu itself and how to display each item.
+
+---
+#### isOpen : boolean (default: `false`)
+Shows if the items are currently displayed or not.
+
+---
+#### toggleOnClick : boolean (default: `false`)
+If `true` the menu will close when an item is clicked.
+
+---
+#### background : String
+Sets the css attribute `background` for the whole menu.
+
+---
+#### color : String
+Sets the css attribute `color` for the whole menu.
+
+---
+#### size : String (default: `normal`)
+Possible values: `small, normal, big`
+
+
+---
+#### button : Object
+Configuration of the central button which toggles the menu.
+
+---
+##### button.content : String
+The text that will be rendered in the button.
+
+---
+##### button.cssClass : String
+Adds css classes to the button.
+
+---
+##### button.background : String
+Sets the css attribute `background` for the button.
+
+---
+##### button.color : String
+Sets the css attribute `color` for the button.
+
+---
+##### button.size : String (default: `normal`)
+Possible values: `small, normal, big`
+
+
+---
+#### items : Array of Objects
+
+---
+##### items.content : String
+The text that will be rendered in this item.
+
+---
+##### items.isActive : boolean (default: `false`)
+If `true` the item is rendered more prominent.
+
+---
+##### items.onclick : function
+This function will called when the item is clicked and gets the item itself as attribute.
+
+---
+##### items.cssClass : String
+Adds css classes to this item.
+
+---
+##### items.background : String
+Sets the css attribute `background` for this item.
+
+---
+##### items.color : String
+Sets the css attribute `color` for this item.
+
+---
+##### button.empty : boolean (default: `false`)
+If `true` the item is not rendered.
+
 
 
 ## Development
