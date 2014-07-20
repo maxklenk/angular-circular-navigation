@@ -1,23 +1,114 @@
+// -------------------------------------
+//   User defined
+// -------------------------------------
+
 $item-background-color: #0A833D;
-$item-color: #fff;
+$item-color: #ffffff;
 
-// Small
-// $button-size: 2em;
-// $li-top: 3.4em;
-// $a-size: 8em;
+$button-small-size: 2em;
+$button-middle-size: 3em;
+$button-big-size: 4em;
 
-// Middle
-$button-size: 2em;
-$li-top: 3.3em;
-$a-size: 10em;
+$li-small-top: 2.6em;
+$li-middle-top: 3.3em;
+$li-big-top: 4.5em;
 
-// Text
-// $button-size: 4.5em; 
-// $li-top: 6em;
-// $a-size: 14em;
+$a-small-size: 8em;
+$a-middle-size: 10em;
+$a-big-size: 14em;
 
-$wrapper-size: $a-size * 1.75;
-$li-size: $a-size;
+
+// -------------------------------------
+//   Sizing
+// -------------------------------------
+
+// are calculated
+$wrapper-small-size: $a-small-size * 1.75;
+$wrapper-middle-size: $a-middle-size * 1.75;
+$wrapper-big-size: $a-big-size * 1.75;
+$li-small-size: $a-small-size;
+$li-middle-size: $a-middle-size;
+$li-big-size: $a-big-size;
+
+// sizing buttons
+.cn-button {
+  margin-top: - $button-middle-size / 2;
+  margin-left: - $button-middle-size / 2;
+  width: $button-middle-size;
+  height: $button-middle-size;
+}
+.cn-button.small {
+  margin-top: - $button-small-size / 2;
+  margin-left: - $button-small-size / 2;
+  width: $button-small-size;
+  height: $button-small-size;
+}
+.cn-button.big {
+  margin-top: - $button-big-size / 2;
+  margin-left: - $button-big-size / 2;
+  width: $button-big-size;
+  height: $button-big-size;
+}
+
+// sizing wrapper
+.cn-wrapper {
+  margin-top: - $wrapper-middle-size / 2;
+  margin-left: - $wrapper-middle-size / 2;
+  width: $wrapper-middle-size;
+  height: $wrapper-middle-size;
+}
+.cn-wrapper.small {
+  margin-top: - $wrapper-small-size / 2;
+  margin-left: - $wrapper-small-size / 2;
+  width: $wrapper-small-size;
+  height: $wrapper-small-size;
+}
+.cn-wrapper.big {
+  margin-top: - $wrapper-big-size / 2;
+  margin-left: - $wrapper-big-size / 2;
+  width: $wrapper-big-size;
+  height: $wrapper-big-size;
+}
+
+// sizing items
+.cn-wrapper li {
+  margin-top: - $li-middle-top;
+  margin-left: - $li-middle-size;
+  width: $li-middle-size;
+  height: $li-middle-size;
+}
+.cn-wrapper.small li {
+  margin-top: - $li-small-top;
+  margin-left: - $li-small-size;
+  width: $li-small-size;
+  height: $li-small-size;
+}
+.cn-wrapper.big li {
+  margin-top: - $li-big-top;
+  margin-left: - $li-big-size;
+  width: $li-big-size;
+  height: $li-big-size;
+}
+
+.cn-wrapper li a {
+  right: - $a-middle-size / 2;
+  bottom: - $a-middle-size / 2;
+  width: $a-middle-size;
+  height: $a-middle-size;
+}
+.cn-wrapper.small li a {
+  right: - $a-small-size / 2;
+  bottom: - $a-small-size / 2;
+  width: $a-small-size;
+  height: $a-small-size;
+}
+.cn-wrapper.big li a {
+  right: - $a-big-size / 2;
+  bottom: - $a-big-size / 2;
+  width: $a-big-size;
+  height: $a-big-size;
+}
+
 
 // -------------------------------------
 //   Main
@@ -61,11 +152,6 @@ circular, .circular {
   cursor: pointer;
   -webkit-backface-visibility: hidden;
   outline: 0;
-
-  margin-top: - $button-size / 2;
-  margin-left: - $button-size / 2;
-  width: $button-size;
-  height: $button-size;
 }
 
 // -------------------------------------
@@ -87,11 +173,6 @@ circular, .circular {
   transform: scale(0.1);
   pointer-events: none;
   overflow: hidden;
-
-  margin-top: - $wrapper-size / 2;
-  margin-left: - $wrapper-size / 2;
-  width: $wrapper-size;
-  height: $wrapper-size;
 }
 
 .opened-nav {
@@ -116,10 +197,6 @@ circular, .circular {
   top: 50%;
   left: 50%;
   overflow: hidden;
-  margin-top: - $li-top;
-  margin-left: - $li-size;
-  width: $li-size;
-  height: $li-size;
   font-size: 1.3em;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
@@ -131,10 +208,6 @@ circular, .circular {
 
 .cn-wrapper li a {
   position: absolute;
-  right: - $a-size / 2;
-  bottom: - $a-size / 2;
-  width: $a-size;
-  height: $a-size;
   display: block;
   border-radius: 50%;
   background: $item-background-color;

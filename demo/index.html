@@ -46,19 +46,19 @@
       var app = angular.module('demoApp', ['angularCircularNavigation', 'json-tree']);
 
       app.controller('Controller', function ($scope) {
-        $scope.switchAxis = function(clicked) {
+        $scope.switchAxis = function (clicked) {
           $scope.options.items[0].isActive = false;
           $scope.options.items[1].isActive = false;
           clicked.isActive = true;
         };
-        $scope.switchColor = function(clicked) {
+        $scope.switchColor = function (clicked) {
           $scope.options.items[7].isActive = false;
           $scope.options.items[8].isActive = false;
           $scope.options.items[9].isActive = false;
           clicked.isActive = true;
           $scope.options.button.background = clicked.background;
         };
-        $scope.switchType = function(clicked) {
+        $scope.switchType = function (clicked) {
           $scope.options.items[3].isActive = false;
           $scope.options.items[4].isActive = false;
           $scope.options.items[5].isActive = false;
@@ -71,55 +71,46 @@
           toggleOnClick: true,
           background: 'green',
           color: 'white',
+          size: '',
           button: {
             content: '',
             cssClass: 'fa fa-bar-chart-o',
             background: 'red',
-            color: 'white'
+            color: 'white',
+            size: 'small'
           },
-          items: [
-            {
-              content: 'Y1',
-              isActive: true,
-              onclick: $scope.switchAxis
-            },
-            {
-              content: 'Y2',
-              onclick: $scope.switchAxis
-            },
-            {
-              empty: true
-            },
-            {
-              cssClass: 'fa fa-bar-chart-o',
-              isActive: true,
-              onclick: $scope.switchType
-            },
-            {
-              cssClass: 'fa fa-camera-retro',
-              onclick: $scope.switchType
-            },
-            {
-              cssClass: 'fa fa-paper-plane-o',
-              onclick: $scope.switchType
-            },
-            {
-              empty: true
-            },
-            {
-              isActive: true,
-              background: 'red',
-              onclick: $scope.switchColor
-            },
-            {
-              background: 'blue',
-              onclick: $scope.switchColor
-            },
-            {
-              background: 'yellow',
-              onclick: $scope.switchColor
-            }
-          ]
+          items: [{
+            content: 'Y1',
+            isActive: true,
+            onclick: $scope.switchAxis
+          }, {
+            content: 'Y2',
+            onclick: $scope.switchAxis
+          }, {
+            empty: true
+          }, {
+            cssClass: 'fa fa-bar-chart-o',
+            isActive: true,
+            onclick: $scope.switchType
+          }, {
+            cssClass: 'fa fa-camera-retro',
+            onclick: $scope.switchType
+          }, {
+            cssClass: 'fa fa-paper-plane-o',
+            onclick: $scope.switchType
+          }, {
+            empty: true
+          }, {
+            isActive: true,
+            background: 'red',
+            onclick: $scope.switchColor
+          }, {
+            background: 'blue',
+            onclick: $scope.switchColor
+          }, {
+            background: 'yellow',
+            onclick: $scope.switchColor
+          }]
         };
       });
     </script>
