@@ -6,3 +6,6 @@ bower_components/
 
 # testing
 coverage/
+
+# sass
+.sass-cache/

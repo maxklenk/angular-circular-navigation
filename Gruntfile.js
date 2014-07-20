@@ -20,6 +20,17 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
 
+    // Compiles Sass to CSS and generates necessary files if requested
+    compass: {
+      dist: {
+        options: {
+          sassDir: 'scss',
+          cssDir: '',
+          // environment: 'production'
+        }
+      }
+    },
+
     karma: {
       unit: {
         options: testConfig('test/karma.conf.js')

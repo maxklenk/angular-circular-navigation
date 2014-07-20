@@ -1,8 +1,11 @@
 {
   "name": "angular-circular-navigation",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "AngularJS directive for circular navigation menus",
-  "main": "angular-circular-navigation.js",
+  "main": [
+    "angular-circular-navigation.js",
+    "angular-circular-navigation.css"
+  ],
   "scripts": {
     "test": "grunt"
   },
@@ -27,6 +30,7 @@
     "grunt-contrib-jshint": "~0.10",
     "grunt-karma": "~0.8",
     "grunt-karma-coveralls": "~2.5",
+    "grunt-contrib-compass": "~0.9.0",
     "karma": "~0.12",
     "karma-coverage": "~0.2",
     "karma-jasmine": "~0.2",

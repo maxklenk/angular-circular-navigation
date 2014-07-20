@@ -53,6 +53,43 @@ describe('angularCircularNavigation', function () {
       expect(element.html()).not.toBe(null);
     });
 
+    it('perform() without onclick', function () {
+      var item = {};
+      elementScope.perform(item);
+
+      expect(element.html()).not.toBe(null);
+    });
+
+    it('perform() with non function', function () {
+      var item = {
+        onclick: 'String'
+      };
+      elementScope.perform(item);
+
+      expect(element.html()).not.toBe(null);
+    });
+    
+    it('perform() with function', function () {
+      var item = {
+        onclick: function () {}
+      };
+      spyOn(item, 'onclick');
+      elementScope.perform(item);
+
+      expect(item.onclick).toHaveBeenCalled();
+
+      expect(element.html()).not.toBe(null);
+    });
+    
+    it('perform() with toggle', function () {
+      $scope.options.toggleOnClick = true;
+
+      var item = {};
+      elementScope.perform(item);
+      
+      expect(element.html()).not.toBe(null);
+    });
+
   });
 
 });
