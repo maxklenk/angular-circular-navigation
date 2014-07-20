@@ -1,5 +1,28 @@
 @import url(http://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css);
 
+// Small
+// $button-size: 2em;
+// $empty-circel-size: 2em;
+// $li-top: 3.4em;
+// $a-size: 8em; // outer item size
+// $a-percent: 22%; // space not collered of item in center
+
+// Middle
+$button-size: 2.2em;
+$empty-circel-size: 2em;
+$li-top: 4.17em;
+$a-size: 10em; // outer item size
+$a-percent: 16%; // space not collered of item in center
+
+// Text
+// $button-size: 4.5em; 
+// $empty-circel-size: 6.2em;
+// $li-top: 6em;
+// $a-size: 14em; // outer item size
+// $a-percent: 35%; // space not collered of item in center
+
+$wrapper-size: $a-size * 1.75;
+$li-size: $a-size;
 
 // -------------------------------------
 //   Main
@@ -30,11 +53,7 @@ circular, .circular {
   top: 100%;
   left: 50%;
   z-index: 11;
-  margin-top: -2.25em;
-  margin-left: -2.25em;
   padding-top: 0em;
-  width: 4.5em;
-  height: 4.5em;
   border: none;
   border-radius: 50%;
   background: none;
@@ -46,23 +65,22 @@ circular, .circular {
   text-transform: uppercase;
   cursor: pointer;
   -webkit-backface-visibility: hidden;
+  outline: 0;
+
+  margin-top: - $button-size / 2;
+  margin-left: - $button-size / 2;
+  width: $button-size;
+  height: $button-size;
 }
-
-
 
 // -------------------------------------
 //   ??
 // -------------------------------------
-
 .cn-wrapper {
   position: absolute;
   top: 100%;
   left: 50%;
   z-index: 10;
-  margin-top: -13em;
-  margin-left: -13.5em;
-  width: 27em;
-  height: 27em;
   border-radius: 50%;
   background: transparent;
   opacity: 0;
@@ -74,23 +92,29 @@ circular, .circular {
   transform: scale(0.1);
   pointer-events: none;
   overflow: hidden;
+
+  margin-top: - $wrapper-size / 2;
+  margin-left: - $wrapper-size / 2;
+  width: $wrapper-size;
+  height: $wrapper-size;
 }
 
-/*cover to prevent extra space of anchors from being clickable*/
+// cover to prevent extra space of anchors from being clickable
 .cn-wrapper:after{
-  content:".";
-  display:block;
-  font-size:2em;
-  width:6.2em;
-  height:6.2em;
+  content: ".";
+  display: block;
+  font-size: 2em;
   position: absolute;
   left: 50%;
-  margin-left: -3.1em;
-  top:50%;
-  margin-top: -3.1em;
+  top: 50%;
   border-radius: 50%;
-  z-index:10;
+  z-index: 10;
   color: transparent;
+
+  width: $empty-circel-size;
+  height: $empty-circel-size;
+  margin-left: - $empty-circel-size / 2;
+  margin-top: - $empty-circel-size / 2;
 }
 
 .opened-nav {
@@ -106,7 +130,6 @@ circular, .circular {
 }
 
 
-
 // -------------------------------------
 //   ??
 // -------------------------------------
@@ -116,17 +139,14 @@ circular, .circular {
   top: 50%;
   left: 50%;
   overflow: hidden;
-  margin-top: -1.3em;
-  margin-left: -10em;
-  width: 10em;
-  height: 10em;
+  margin-top: - $li-top;
+  margin-left: - $li-size;
+  width: $li-size;
+  height: $li-size;
   font-size: 1.5em;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   transition: all .3s ease;
-  -webkit-transform: rotate(75deg) skew(60deg);
-  -ms-transform: rotate(75deg) skew(60deg);
-  transform: rotate(75deg) skew(60deg);
   -webkit-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
   pointer-events: none;
@@ -134,27 +154,25 @@ circular, .circular {
 
 .cn-wrapper li a {
   position: absolute;
-  right: -7.25em;
-  bottom: -7.25em;
+  right: - $a-size / 2;
+  bottom: - $a-size / 2;
+  width: $a-size;
+  height: $a-size;
   display: block;
-  width: 14.5em;
-  height: 14.5em;
   border-radius: 50%;
   background: #429a67;
-  background: -webkit-radial-gradient(transparent 35%, #429a67 35%);
-  background: -moz-radial-gradient(transparent 35%, #429a67 35%);
-  background: radial-gradient(transparent 35%, #429a67 35%);
+  background: -webkit-radial-gradient(transparent $a-percent, #429a67 $a-percent);
+  background: -moz-radial-gradient(transparent $a-percent, #429a67 $a-percent);
+  background: radial-gradient(transparent $a-percent, #429a67 $a-percent);
   color: #fff;
   text-align: center;
   text-decoration: none;
   font-size: 1.2em;
   line-height: 2;
-  -webkit-transform: skew(-60deg) rotate(-75deg) scale(1);
-  -ms-transform: skew(-60deg) rotate(-75deg) scale(1);
-  transform: skew(-60deg) rotate(-75deg) scale(1);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   pointer-events: auto;
+  cursor: pointer;
 }
 
 .cn-wrapper li a span {
@@ -169,12 +187,10 @@ circular, .circular {
 .cn-wrapper li a:hover,
 .cn-wrapper li a:active,
 .cn-wrapper li a:focus {
-  background: -webkit-radial-gradient(transparent 35%, #449e6a 35%);
-  background: -moz-radial-gradient(transparent 35%, #449e6a 35%);
-  background: radial-gradient(transparent 35%, #449e6a 35%);
+  background: -webkit-radial-gradient(transparent $a-percent, #449e6a $a-percent);
+  background: -moz-radial-gradient(transparent $a-percent, #449e6a $a-percent);
+  background: radial-gradient(transparent $a-percent, #449e6a $a-percent);
 }
-
-
 
 .opened-nav li {
   -webkit-transition: all .3s ease .3s;
@@ -183,83 +199,92 @@ circular, .circular {
 }
 
 
-
 // -------------------------------------
 //   rotated items
 // -------------------------------------
 
 @mixin prefix($property, $value) {
-     @each $prefix in -webkit-, -ms-, '' {
-          #{$prefix}#{$property}: $value;
-     }
+  @each $prefix in -webkit-, -ms-, '' {
+    #{$prefix}#{$property}: $value;
+  }
 }
+
+$skew: 60deg;
 // odd
 .item-odd-left-5 {
-  @include prefix(transform, rotate(-85deg) skew(60deg));
+  @include prefix(transform, rotate(-85deg) skew($skew));
 }
 .item-odd-left-4 {
-  @include prefix(transform, rotate(-53deg) skew(60deg));
+  @include prefix(transform, rotate(-53deg) skew($skew));
 }
 .item-odd-left-3 {
-  @include prefix(transform, rotate(-21deg) skew(60deg));
+  @include prefix(transform, rotate(-21deg) skew($skew));
 }
 .item-odd-left-2 {
-  @include prefix(transform, rotate(11deg) skew(60deg));
+  @include prefix(transform, rotate(11deg) skew($skew));
 }
 .item-odd-left-1 {
-  @include prefix(transform, rotate(43deg) skew(60deg));
+  @include prefix(transform, rotate(43deg) skew($skew));
 }
 .item-odd-center {
-  @include prefix(transform, rotate(75deg) skew(60deg));
+  @include prefix(transform, rotate(75deg) skew($skew));
 }
 .item-odd-right-1 {
-  @include prefix(transform, rotate(107deg) skew(60deg));
+  @include prefix(transform, rotate(107deg) skew($skew));
 }
 .item-odd-right-2 {
-  @include prefix(transform, rotate(139deg) skew(60deg));
+  @include prefix(transform, rotate(139deg) skew($skew));
 }
 .item-odd-right-3 {
-  @include prefix(transform, rotate(171deg) skew(60deg));
+  @include prefix(transform, rotate(171deg) skew($skew));
 }
 .item-odd-right-4 {
-  @include prefix(transform, rotate(203deg) skew(60deg));
+  @include prefix(transform, rotate(203deg) skew($skew));
 }
 .item-odd-right-5 {
-  @include prefix(transform, rotate(235deg) skew(60deg));
+  @include prefix(transform, rotate(235deg) skew($skew));
 }
 
 // even
 .item-even-left-5 {
-  @include prefix(transform, rotate(-69deg) skew(60deg));
+  @include prefix(transform, rotate(-69deg) skew($skew));
 }
 .item-even-left-4 {
-  @include prefix(transform, rotate(-37deg) skew(60deg));
+  @include prefix(transform, rotate(-37deg) skew($skew));
 }
 .item-even-left-3 {
-  @include prefix(transform, rotate(-5deg) skew(60deg));
+  @include prefix(transform, rotate(-5deg) skew($skew));
 }
 .item-even-left-2 {
-  @include prefix(transform, rotate(27deg) skew(60deg));
+  @include prefix(transform, rotate(27deg) skew($skew));
 }
 .item-even-left-1 {
-  @include prefix(transform, rotate(59deg) skew(60deg));
+  @include prefix(transform, rotate(59deg) skew($skew));
 }
 .item-even-right-1 {
-  @include prefix(transform, rotate(91deg) skew(60deg));
+  @include prefix(transform, rotate(91deg) skew($skew));
 }
 .item-even-right-2 {
-  @include prefix(transform, rotate(123deg) skew(60deg));
+  @include prefix(transform, rotate(123deg) skew($skew));
 }
 .item-even-right-3 {
-  @include prefix(transform, rotate(155deg) skew(60deg));
+  @include prefix(transform, rotate(155deg) skew($skew));
 }
 .item-even-right-4 {
-  @include prefix(transform, rotate(187deg) skew(60deg));
+  @include prefix(transform, rotate(187deg) skew($skew));
 }
 .item-even-right-5 {
-  @include prefix(transform, rotate(219deg) skew(60deg));
+  @include prefix(transform, rotate(219deg) skew($skew));
 }
 
+// ----- Default -----
+.cn-wrapper li {
+  @extend .item-odd-center;
+}
+// ----- Content -----
+.cn-wrapper li a {
+  @include prefix(transform, skew(- $skew) rotate(-75deg)  scale(1));
+}
 
 // ----- items-1 ----- 
   .opened-nav.items-1 li:first-child {
