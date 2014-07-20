@@ -10,7 +10,6 @@ angular.module('angularCircularNavigation', [])
         scope: {
           options: '='
         },
-        // templateUrl: 'angular-circular-navigation.html',
         template: '<button ng-click="toggleMenu()" class="cn-button {{options.button.size}}" ng-class="options.button.cssClass" style="background: {{options.button.background ? options.button.background : options.background}}; color: {{options.button.color ? options.button.color :options.color}};">{{options.content}}</button>' + 
                   '<div class="cn-wrapper {{options.size}} items-{{options.items.length}}" ng-class="{\'opened-nav\': options.isOpen}"><ul>' +
                     '<li ng-repeat="item in options.items">' +
