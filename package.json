@@ -1,8 +1,11 @@
 {
   "name": "angular-circular-navigation",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "AngularJS directive for circular navigation menus",
-  "main": "angular-circular-navigation.js",
+  "main": [
+    "angular-circular-navigation.js",
+    "angular-circular-navigation.css"
+  ],
   "scripts": {
     "test": "grunt"
   },
