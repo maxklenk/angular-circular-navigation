@@ -110,7 +110,7 @@ If `true` the item is rendered more prominent.
 
 ---
 ##### items.onclick : function
-This function will called when the item is clicked and gets the item itself as attribute.
+This function will called when the item is clicked and gets the option and the item itself as attribute.
 
 ---
 ##### items.cssClass : String
