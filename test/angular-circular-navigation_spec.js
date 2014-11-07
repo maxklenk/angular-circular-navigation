@@ -54,27 +54,30 @@ describe('angularCircularNavigation', function () {
     });
 
     it('perform() without onclick', function () {
+      var options = {};
       var item = {};
-      elementScope.perform(item);
+      elementScope.perform(options, item);
 
       expect(element.html()).not.toBe(null);
     });
 
     it('perform() with non function', function () {
+      var options = {};
       var item = {
         onclick: 'String'
       };
-      elementScope.perform(item);
+      elementScope.perform(options, item);
 
       expect(element.html()).not.toBe(null);
     });
     
     it('perform() with function', function () {
+      var options = {};
       var item = {
         onclick: function () {}
       };
       spyOn(item, 'onclick');
-      elementScope.perform(item);
+      elementScope.perform(options, item);
 
       expect(item.onclick).toHaveBeenCalled();
 
@@ -84,8 +87,9 @@ describe('angularCircularNavigation', function () {
     it('perform() with toggle', function () {
       $scope.options.toggleOnClick = true;
 
+      var options = {};
       var item = {};
-      elementScope.perform(item);
+      elementScope.perform(options, item);
       
       expect(element.html()).not.toBe(null);
     });

@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="demo/bower_components/json-tree/json-tree.css">
     <link rel="stylesheet" href="angular-circular-navigation.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
     <script src="demo/bower_components/angular/angular.js"></script>
     <script src="demo/bower_components/json-tree/json-tree.js"></script>
@@ -46,19 +46,19 @@
       var app = angular.module('demoApp', ['angularCircularNavigation', 'json-tree']);
 
       app.controller('Controller', function ($scope) {
-        $scope.switchAxis = function (clicked) {
+        $scope.switchAxis = function (options, clicked) {
           $scope.options.items[0].isActive = false;
           $scope.options.items[1].isActive = false;
           clicked.isActive = true;
         };
-        $scope.switchColor = function (clicked) {
+        $scope.switchColor = function (options, clicked) {
           $scope.options.items[7].isActive = false;
           $scope.options.items[8].isActive = false;
           $scope.options.items[9].isActive = false;
           clicked.isActive = true;
           $scope.options.button.background = clicked.background;
         };
-        $scope.switchType = function (clicked) {
+        $scope.switchType = function (options, clicked) {
           $scope.options.items[3].isActive = false;
           $scope.options.items[4].isActive = false;
           $scope.options.items[5].isActive = false;
