@@ -211,7 +211,7 @@ circular, .circular {
   display: block;
   border-radius: 50%;
   background: $item-background-color;
-  opacity: 0.5;
+  opacity: 0.7;
   color: $item-color;
   text-align: center;
   text-decoration: none;
@@ -230,7 +230,7 @@ circular, .circular {
 .cn-wrapper li a:hover,
 .cn-wrapper li a:active,
 .cn-wrapper li a:focus {
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .cn-wrapper li a.is-active:hover,
@@ -341,12 +341,12 @@ $skew: 60deg;
   @include prefix(transform, skew(- $skew) rotate(-75deg)  scale(1));
 }
 
-// ----- items-1 ----- 
+// ----- items-1 -----
   .opened-nav.items-1 li:first-child {
     @extend .item-odd-center;
   }
 
-// ----- items-2 ----- 
+// ----- items-2 -----
   .opened-nav.items-2 li:first-child {
     @extend .item-even-left-1;
   }
@@ -354,7 +354,7 @@ $skew: 60deg;
     @extend .item-even-right-1;
   }
 
-// ----- items-3 ----- 
+// ----- items-3 -----
   .opened-nav.items-3 li:first-child {
     @extend .item-odd-left-1;
   }
@@ -367,7 +367,7 @@ $skew: 60deg;
     @extend .item-odd-right-1;
   }
 
-// ----- items-4 ----- 
+// ----- items-4 -----
   .opened-nav.items-4 li:first-child {
     @extend .item-even-left-2;
   }
@@ -384,7 +384,7 @@ $skew: 60deg;
     @extend .item-even-right-2;
   }
 
-// ----- items-5 ----- 
+// ----- items-5 -----
   .opened-nav.items-5 li:first-child {
     @extend .item-odd-left-2;
   }
@@ -405,7 +405,7 @@ $skew: 60deg;
     @extend .item-odd-right-2;
   }
 
-// ----- items-6 ----- 
+// ----- items-6 -----
   .opened-nav.items-6 li:first-child {
     @extend .item-even-left-3;
   }
@@ -430,7 +430,7 @@ $skew: 60deg;
     @extend .item-even-right-3;
   }
 
-// ----- items-7 ----- 
+// ----- items-7 -----
   .opened-nav.items-7 li:first-child {
     @extend .item-odd-left-3;
   }
@@ -459,7 +459,7 @@ $skew: 60deg;
     @extend .item-odd-right-3;
   }
 
-// ----- items-8 ----- 
+// ----- items-8 -----
   .opened-nav.items-8 li:first-child {
     @extend .item-even-left-4;
   }
@@ -492,7 +492,7 @@ $skew: 60deg;
     @extend .item-even-right-4;
   }
 
-// ----- items-9 ----- 
+// ----- items-9 -----
   .opened-nav.items-9 li:first-child {
     @extend .item-odd-left-4;
   }
@@ -528,7 +528,7 @@ $skew: 60deg;
     @extend .item-odd-right-4;
   }
 
-// ----- items-10 ----- 
+// ----- items-10 -----
   .opened-nav.items-10 li:first-child {
     @extend .item-even-left-5;
   }
@@ -569,7 +569,7 @@ $skew: 60deg;
     @extend .item-even-right-5;
   }
 
-// ----- items-11 ----- 
+// ----- items-11 -----
   .opened-nav.items-11 li:first-child {
     @extend .item-odd-left-5;
   }
