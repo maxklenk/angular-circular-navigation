@@ -3,7 +3,7 @@
 angular-circular-navigation is a [AngularJS](https://github.com/angular/angular.js) directive, which is build on top of the Tutorial [Building a circular navigation with css transform](http://tympanus.net/codrops/2013/08/09/building-a-circular-navigation-with-css-transforms/) by [Sara Soueidan](http://sarasoueidan.com/).
 
 
-## Usage
+## Usage [![Dependency Status](https://gemnasium.com/maxklenk/angular-circular-navigation.svg)](https://gemnasium.com/maxklenk/angular-circular-navigation)
 
 You can get it from [Bower](http://bower.io/):
 ```sh
