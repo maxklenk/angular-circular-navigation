@@ -9,3 +9,6 @@ coverage/
 
 # sass
 .sass-cache/
+
+# ide
+.idea
