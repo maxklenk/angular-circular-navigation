@@ -7,8 +7,8 @@ module.exports = function (config) {
 
     files: [
       // libraries
-      'bower_components/angular/angular.min.js',
-      'bower_components/angular-mocks/angular-mocks.js',
+      'node_modules/angular/angular.min.js',
+      'node_modules/angular-mocks/angular-mocks.js',
 
       // the directive
       'angular-circular-navigation.js',

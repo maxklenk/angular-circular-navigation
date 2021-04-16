@@ -134,7 +134,7 @@ If `true` the item is not rendered.
 
 We use Karma and jshint to ensure the quality of the code. The easiest way to run these checks is to use grunt:
 ```sh
-npm install -g bower grunt-cli
+npm install -g grunt-cli
 npm install
 grunt
 ```

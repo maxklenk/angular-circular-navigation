@@ -6,9 +6,9 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   // default task
-  grunt.registerTask('default', ['jshint', 'karma:unit']);
-  grunt.registerTask('watch', ['karma:watch']);
-  grunt.registerTask('coverage', ['karma:coverage', 'coveralls']);
+  grunt.task.registerTask('default', ['jshint', 'karma:unit']);
+  grunt.task.registerTask('watch', ['karma:watch']);
+  grunt.task.registerTask('coverage', ['karma:coverage', 'coveralls']);
 
 
   // perform test in Firefox on travis ci
