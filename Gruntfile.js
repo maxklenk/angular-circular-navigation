@@ -14,7 +14,7 @@ module.exports = function (grunt) {
   // perform test in Firefox on CI
   var testConfig = function(configFile, customOptions) {
     var options = { configFile: configFile, keepalive: true };
-    var ciOptions = process.env.CI && { browsers: ['Firefox'] };
+    var ciOptions = process.env.CI && { browsers: ['FirefoxHeadless'] };
     return grunt.util._.extend(options, customOptions, ciOptions);
   };
 
