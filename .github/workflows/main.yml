@@ -26,4 +26,4 @@ jobs:
       - name: Test
         uses: GabrielBB/xvfb-action@v1.4
         with:
-          run: --server-args="-screen 0" gront coverage
+          run: --server-args="-screen 0" grunt coverage
