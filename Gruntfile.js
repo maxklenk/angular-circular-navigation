@@ -11,11 +11,11 @@ module.exports = function (grunt) {
   grunt.task.registerTask('coverage', ['karma:coverage', 'coveralls']);
 
 
-  // perform test in Firefox on travis ci
+  // perform test in Firefox on CI
   var testConfig = function(configFile, customOptions) {
     var options = { configFile: configFile, keepalive: true };
-    var travisOptions = process.env.TRAVIS && { browsers: ['Firefox'] };
-    return grunt.util._.extend(options, customOptions, travisOptions);
+    var ciOptions = process.env.CI && { browsers: ['Firefox'] };
+    return grunt.util._.extend(options, customOptions, ciOptions);
   };
 
   grunt.initConfig({
