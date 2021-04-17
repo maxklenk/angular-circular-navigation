@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/maxklenk/angular-circular-navigation.git"
+    "url": "git://github.com/tue-robotics/angular-circular-navigation.git"
   },
   "keywords": [
     "angular",
@@ -33,15 +33,16 @@
     "angular-mocks": "^1.8.0"
   },
   "devDependencies": {
-    "load-grunt-tasks": "^5.1.0",
     "grunt": "^1.0.0",
+    "grunt-contrib-compass": "^1.1.1",
     "grunt-contrib-jshint": "^3.0.0",
     "grunt-karma": "^4.0.0",
-    "grunt-contrib-compass": "^1.1.1",
+    "json-tree2": "^0.1.5",
     "karma": "^4.0.0",
-    "karma-coverage": "^2.0.0",
-    "karma-jasmine": "^4.0.0",
     "karma-chrome-launcher": "^3.0.0",
-    "karma-firefox-launcher": "^2.0.0"
+    "karma-coverage": "^2.0.0",
+    "karma-firefox-launcher": "^2.0.0",
+    "karma-jasmine": "^4.0.0",
+    "load-grunt-tasks": "^5.1.0"
   }
 }
