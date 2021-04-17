@@ -8,7 +8,7 @@ module.exports = function (grunt) {
   // default task
   grunt.task.registerTask('default', ['jshint', 'karma:unit']);
   grunt.task.registerTask('watch', ['karma:watch']);
-  grunt.task.registerTask('coverage', ['karma:coverage', 'coveralls']);
+  grunt.task.registerTask('coverage', ['karma:coverage']);
 
 
   // perform test in Firefox on CI
@@ -43,13 +43,6 @@ module.exports = function (grunt) {
       coverage: {
         options: testConfig('test/karma.conf.js'),
         reporters: ['coverage']
-      }
-    },
-
-    coveralls: {
-      options: {
-        debug: true,
-        coverageDir: 'coverage'
       }
     },
 

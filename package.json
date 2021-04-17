@@ -37,7 +37,6 @@
     "grunt": "^1.0.0",
     "grunt-contrib-jshint": "^3.0.0",
     "grunt-karma": "^4.0.0",
-    "grunt-karma-coveralls": "^2.5.4",
     "grunt-contrib-compass": "^1.1.1",
     "karma": "^4.0.0",
     "karma-coverage": "^2.0.0",
